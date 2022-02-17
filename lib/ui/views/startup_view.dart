@@ -30,7 +30,7 @@ class StartUpView extends StatelessWidget {
             children: <Widget>[
               verticalSpaceSmall,
               verticalSpaceSmall,
-              Text(
+              const Text(
                 'Survey PPTIK',
                 style: titleTextStyle,
               ),
@@ -38,7 +38,7 @@ class StartUpView extends StatelessWidget {
               SizedBox(
                 width: 300,
                 height: 100,
-                child: Image.asset('assets/logos.png'),
+                child: Image.asset('assets/logo.png'),
               ),
               verticalSpaceMedium,
               CircularProgressIndicator(

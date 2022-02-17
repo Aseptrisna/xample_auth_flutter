@@ -51,14 +51,15 @@ class OAuthService {
   }
 
   Future<LoginData?> checkUser(String token) async {
+    // print("cek");
     Map<String, String> headers = {
       "Content-type":"application/json",
       "Accept":"application/json",
       "Authorization":token
     };
     final uri = Uri.http(BASE_URL, "app/auth/getuser");
-    final response = await http.get(Uri.parse(uri.toString()), headers:headers);
-    print(response);
+    final response = await http.get(uri, headers:headers);
+    // print(response);
     if(response.statusCode==200){
       Map<String, dynamic> responseData = jsonDecode(response.body);
       print(response.body);
@@ -69,6 +70,7 @@ class OAuthService {
           last_name: responseData['last_name']
       );
     }else{
+      // print(response.body);
       return null;
     }
 

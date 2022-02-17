@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-const BASE_URL = '192.168.0.8:5103';
+const BASE_URL = 'oid.pptik.id:5103';
 const CLIENT_ID = '7183573307834228-5nds1rp6yolv6fgj771g7b0ubcgrrhndlr3a.oid.pptik.id';
 const LOGIN_URI = '/app/auth/login';
 const REDIRECT_URI = 'oid.pptik.id';
